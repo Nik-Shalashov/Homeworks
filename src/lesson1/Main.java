@@ -26,24 +26,20 @@ public class Main {
     }
 
     //Задание 3
-    static int calculate(int a, int b, int c, int d) {
+    static double calculate(int a, int b, int c, int d) {
         if (d == 0) {
             Scanner in = new Scanner(System.in);
             System.out.println("Параметр d не может быть равным 0, измените его");
             d = in.nextInt();
             in.close();
         }
-        return a * (b + (c / d));
+        return a * (b + (1.0 * c / d));
     }
 
     //Задание 4
     static boolean compareSum(int a, int b) {
         int c = a + b;
-        if (c >= 10 && c <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return  (c >= 10 && c <= 20);
     }
 
     //Задание 5
@@ -57,12 +53,9 @@ public class Main {
 
     //Задание 6
     static boolean checkBelowZero(int a) {
-        if (a < 0) {
-            return true;
-        } else {
-            return false;
+        return (a < 0);
         }
-    }
+
 
     //Задание 7
     static void sayHello(String name) {
@@ -71,7 +64,7 @@ public class Main {
 
     //Задание 8*
     static void whatsYear(int year) {
-        if ((year % 4) != 0 || (year % 400) != 0 && (year % 100) == 0) {
+        if ((year % 4) != 0 || ((year % 400) != 0 && (year % 100) == 0)) {
             System.out.println("Год  не високосный");
         } else {
             System.out.println("Год високосный");
