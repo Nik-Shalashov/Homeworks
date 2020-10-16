@@ -30,7 +30,7 @@ public class Task1 {
         for (int i = 0; i < 3; i++) {
             userNum = scanner.nextInt();
             if (userNum == randNum) {
-                System.out.println("Поздравляю! Вы угадали число!");
+                System.out.println("Поздравляю! Вы угадали число! Игра окончена.");
                 endGame();
             } else if (i == 2) {
                 System.out.println("К сожалению, вы не угадали число.");
